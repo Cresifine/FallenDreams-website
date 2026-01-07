@@ -156,6 +156,31 @@
             transform: scale(1.05);
         }
 
+        .app-card-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .view-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--teal-app);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: gap 0.3s ease;
+        }
+
+        .view-more svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .app-card:hover .view-more svg {
+            transform: translateX(4px);
+        }
+
         .app-name {
             font-size: 1.75rem;
             font-weight: 600;
@@ -267,28 +292,29 @@
         <!-- Featured App -->
         <section class="app-section">
             <p class="section-label">Our App</p>
-            <div class="app-card">
-                <img src="app_icon.png" alt="InvoTrack App Icon" class="app-icon">
-                <h2 class="app-name">InvoTrack</h2>
-                <p class="app-description">
-                    Job tracking and invoicing made simple for freelancers and small businesses. 
-                    Track jobs, log hours, create professional invoices.
-                </p>
-                <a href="#" class="store-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="currentColor" d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                    </svg>
-                    Coming Soon to Google Play
-                </a>
-            </div>
+            <a href="apps/invotrack/index.html" class="app-card-link">
+                <div class="app-card">
+                    <img src="app_icon.png" alt="InvoTrack App Icon" class="app-icon">
+                    <h2 class="app-name">InvoTrack</h2>
+                    <p class="app-description">
+                        Job tracking and invoicing made simple for freelancers and small businesses. 
+                        Track jobs, log hours, create professional invoices.
+                    </p>
+                    <span class="view-more">
+                        View App
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2026 FallenDreams. All rights reserved.</p>
             <p class="footer-links">
-                <a href="mailto:femboyservicesa@gmail.com">Contact</a> · 
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="mailto:femboyservicesa@gmail.com">Contact</a>
             </p>
         </footer>
     </div>
